@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINAL PROJECT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="side-bar-button">
+                <h3><strong>Press to select LAPTOP or MONITOR</strong></h3>
+                <button class="api-btn" onclick="handleGetAPI1()">LAPTOP</button>
+                <button class="api-btn" onclick="handleGetAPI2()">MONITOR</button>
+        </div>
+        <div class="side-bar-content">
+            <h1><strong>WELCOME TO FINAL PROJECT</strong></h1>
+            <button id="add-product-button" class="create-button" onclick="handleCreate()">Create</button>
+            <div class="side-bar-content-inner">
+
+            </div>
+        </div>
+
+        <div class="edit-form">
+            <form onsubmit="handleEdit(event)">
+                <div class="edit-form-box"> <input id="edit-product-name" type="text" placeholder="Enter product name"></div>
+                <div class="edit-form-box"> <input id="edit-product-price" type="text" placeholder="Enter product price"></div>
+                <div class="edit-form-box"> <input id="edit-product-img" type="text" placeholder="Enter product image"></div>
+    
+                <div class="form-actions">
+                    <button class="button-edit" onclick="handleCancelEdit()" type="button">Cancel</button>
+                    <button class="button-edit" type="submit">Save</button>
+                </div>
+    
+            
+            </form>
+        </div>
+
+        <div class="create-form">
+            <form>
+                <div class="create-form-box"> <input id="create-product-name" type="text" placeholder="Enter product name"></div>
+                <div class="create-form-box"> <input id="create-product-price" type="text" placeholder="Enter product price"></div>
+                <div class="create-form-box"> <input id="create-product-img" type="text" placeholder="Enter product image"></div>
+    
+                <div class="form-actions">
+                    <button class="button-create" onclick="closeCreateLaptopForm()" type="button">Cancel</button>
+                    <button class="button-create" onclick="handleCreateProduct()" type="button">Create Laptop</button>
+                    <button class="button-create" onclick="handleCreateMonitor()" type="button">Create Monitor</button>
+                </div>
+    
+            
+            </form>
+
+
+        </div>
+
+
+
+    </div>
+
+    
+
+    <div id="myModal" class="modal-detail"></div>
+    <script src="main.js"></script>
+</body>
+</html>
